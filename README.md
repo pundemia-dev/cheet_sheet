@@ -28,7 +28,17 @@ A simple electronic cheat sheet with a graphical interface powered by the Wavesh
 1.  **Arduino IDE Setup:**
     *   Install ESP32 Board support (version 3.0.0+ is required for C6).
     *   Select Board: `ESP32C6 Dev Module`.
-    *   **Important:** Set `USB CDC On Boot` to `"Enabled"` to use the Serial Monitor.
+    *   **Tools Menu Configuration:** Configure the board settings exactly as follows:
+        *   **USB CDC On Boot:** `Disabled`
+        *   **CPU Frequency:** `160MHz (WiFi)`
+        *   **Core Debug Level:** `None`
+        *   **Erase All Flash:** `Disabled`
+        *   **Flash Frequency:** `80MHz`
+        *   **Flash Mode:** `QIO`
+        *   **Flash Size:** `4MB (32Mb)`
+        *   **Partition Scheme:** `Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)`
+        *   **Upload Speed:** `921600`
+        *   **Zigbee Mode:** `Disabled`
 
 2.  **Dependencies:**
     Install `EncButton` and `lvgl` via the Arduino Library Manager. Ensure local project files (`Display_ST7789.h`, `SD_Card.h`, `ui.h`, etc.) are in the sketch folder.
@@ -61,3 +71,4 @@ A simple electronic cheat sheet with a graphical interface powered by the Wavesh
 ---
 **Author:** Pundemia
 **Date:** 2025
+
